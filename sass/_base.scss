@@ -1,0 +1,35 @@
+:root {
+  --color-primary: #eac926;
+  --color-grey-dark: #666;
+  --color-grey-light: #ebebeb;
+  --color-icon: #1259c3;
+  --color-blue-dark: #03264c;
+  --color-green: #39b54a;
+
+  --shadow-dark: 0 2rem 6rem rgba(0, 0, 0, 0.3);
+  --shadow-light: 0 2rem 5rem rgba(0, 0, 0, 0.1);
+
+  --line: 1px solid var(--color-grey-light-3);
+}
+//Formato General Global
+* {
+  margin: 0;
+  padding: 0;
+}
+*,
+*::after,
+::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+  text-decoration: none;
+  list-style-type: none;
+}
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+}
+body {
+  font-family: "Roboto", sans-serif;
+}
+//-------------------------------------

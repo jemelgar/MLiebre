@@ -1,0 +1,171 @@
+/*
+Amarillo: #EAC926;
+Azul: #03264C;
+Celeste: #1259c3;
+Gris oscuro: #666;
+Gris claro: #ebebeb;
+Verde: #39b54a;
+*/
+
+*,
+*::after,
+::before {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+}
+html {
+  font-size: 62.5%;
+  /*Se establece 10px para la fuente raíz y trabajar más facilmente con rem*/
+}
+
+body {
+  box-sizing: border-box;
+  color: #777;
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  line-height: 1.7;
+}
+ul {
+  list-style: none;
+  text-decoration: none;
+}
+img {
+  display: block;
+  margin: 0 auto;
+  padding: 1rem;
+  width: 95%;
+}
+a:link {
+  text-decoration: none;
+}
+div i #search {
+  border-left: solid 1px rgb(165, 164, 164);
+  padding-left: 0.5em;
+  position: absolute;
+  right: 2rem;
+}
+
+.nav-bar-container {
+  font-size: 1.2rem;
+}
+div .compra-cuotas {
+  display: block;
+  text-align: center;
+}
+.compras {
+  display: flex;
+  flex-direction: column;
+}
+.hamburguer-icon {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.fa-bars {
+  color: #1259c3;
+  font-size: 2.4rem;
+  margin-bottom: 1rem;
+}
+.header-container {
+  background-color: #eac926;
+}
+.header-first-row {
+  display: flex;
+  flex-wrap: wrap;
+}
+.logo-container {
+  width: 50%;
+}
+.search-bar {
+  align-items: center;
+  display: flex;
+  position: relative;
+  width: 45%;
+}
+.search-input {
+  border-style: none;
+  border-radius: 0.4rem;
+  height: 45%;
+  padding-left: 0.5rem;
+  width: 100%;
+}
+.main-content {
+  background-color: #eee;
+  padding-bottom: 1rem;
+}
+.nav-bar-lists,
+.nav-left,
+.nav-right {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  width: 100%;
+}
+.nav-left,
+.nav-right {
+  flex-direction: column;
+  margin: 0.5rem;
+  width: 45%;
+}
+.nav-right {
+  align-items: flex-end;
+}
+
+.list-item {
+  background-color: #fff;
+  border-radius: 0.4rem;
+  margin: 1rem auto;
+  padding-bottom: 1.5rem;
+  width: 95%;
+}
+.categories {
+  font-size: 2.4rem;
+  margin-left: 2.5%;
+}
+.item-description {
+  align-items: center;
+  border-top: solid 0.2rem #eee;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  padding-top: 1rem;
+}
+.item-price {
+  font-size: 1.8rem;
+  font-weight: 700;
+}
+.item-discount {
+  color: #39b54a;
+  font-size: 1.6rem;
+}
+.item-name {
+  font-size: 1.6rem;
+  font-weight: 700;
+}
+.footer-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  padding-bottom: 2rem;
+}
+.item-footer {
+  text-align: center;
+  width: 25%;
+}
+.footer-title {
+  color: #000;
+  display: inline-block;
+  font-size: 2rem;
+  font-weight: 500;
+}
+footer p {
+  padding-left: 2rem;
+  padding-bottom: 2rem;
+}
+footer ul li i {
+  padding-top: 2.4rem;
+  color: #1259c3;
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
