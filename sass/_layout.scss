@@ -29,20 +29,25 @@ main img {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-between; //para version movil
     padding: 1rem 0;
   }
+
   &__copy {
     margin: 1rem auto;
+    text-align: right;
   }
   &__second-row {
+    display: none;
     width: 95%;
-    display: flex;
     justify-content: space-evenly;
     flex-wrap: wrap;
 
+    & .show {
+      display: flex;
+    }
+
     &__list {
-      display: none;
       flex-wrap: wrap;
       width: 50%;
       &:nth-of-type(2) {
@@ -54,14 +59,16 @@ main img {
       }
     }
   }
+
   &__nav-bar__icon {
+    padding: -2px;
     display: block;
-    width: 100%;
+    border: solid 1px var(--color-icon);
     text-align: center;
     font-size: 2rem;
     color: var(--color-grey-light);
     & i {
-      border-radius: 0.3rem;
+      // border-radius: 0.3rem;
       padding: 0.5rem;
       background-color: var(--color-icon);
     }

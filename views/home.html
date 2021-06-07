@@ -11,9 +11,11 @@
       rel="stylesheet"
     />
     <script
-      src="https://kit.fontawesome.com/5eeef2a623.js"
-      crossorigin="anonymous"
-    ></script>
+        src="https://kit.fontawesome.com/5eeef2a623.js"
+        crossorigin="anonymous"
+      ></script>
+      
+
     <title>Practica movil Mercado Libre</title>
   </head>
   <body>
@@ -22,21 +24,21 @@
         <div class="header__first-row__logo logo">
           <img src="/images/logo-mercado-liebre.svg" alt="logo" />
         </div>
-<div class="container_search-bar">
-        <form class="header__first-row__search-bar search-bar">
+<form class="container_search-bar">
+        <!-- <form class="header__first-row__search-bar search-bar"> -->
           <input type="search" class="" placeholder="Grandes Ofertas" />
           <button class="search__icon">
           <i class="fas fa-search search"></i>
         </button>
         </form>
-        </div>
+        <!-- </div> -->
         <p class="header__copy">
           <i class="fas fa-hand-holding-usd"></i> Compra en cuotas y sin tarjeta
           de crédito
         </p>
       </div>
       <!-- End of header__first-row -->
-      <div class="nav-bar header__second-row">
+      <div class="nav-bar header__second-row" id="nav-ul">
         <ul class="nav-bar__left header__second-row__list">
           <li class="nav-bar__left__item header__second-row__list__item">
             <a href="#">Ofertas</a>
@@ -62,10 +64,10 @@
             <a href="#"><i class="fas fa-shopping-basket"></i> Mis compras</a>
           </li>
         </ul>
-        <div class="header__nav-bar__icon">
-          <i class="fas fa-bars"></i>
-        </div>
       </div>
+      <button class="header__nav-bar__icon " id="hamburguer">
+        <i class="fas fa-bars"></i>
+      </button>
       <!-- End of header__second-row -->
     </header>
     
@@ -177,5 +179,8 @@
       </ul>
       <p class="copyright">Copyright © 1999-2020 MercadoLiebre S.R.L.</p>
     </footer>
+    
+    
+    <script src="/ham.js"></script>
   </body>
 </html>
