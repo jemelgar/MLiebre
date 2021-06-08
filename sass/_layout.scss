@@ -12,25 +12,24 @@ main img {
   margin: 0 auto;
   max-width: 80%;
   height: auto;
-  //   border-radius: 3px;
-  //   padding: 1rem;
 }
 .header {
-  width: 100%;
-  font-size: 1.2rem;
+  position: fixed;
+  align-items: center;
   background-color: var(--color-primary);
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
-  align-items: center;
+  font-size: var(--size-body);
   padding-bottom: 2rem;
+  width: 100%;
   &__first-row {
-    width: 100%;
+    align-items: center;
     display: flex;
     flex-wrap: wrap;
-    align-items: center;
     justify-content: space-between; //para version movil
     padding: 1rem 0;
+    width: 100%;
   }
 
   &__copy {
@@ -39,9 +38,9 @@ main img {
   }
   &__second-row {
     display: none;
-    width: 95%;
-    justify-content: space-evenly;
     flex-wrap: wrap;
+    justify-content: space-evenly;
+    width: 95%;
 
     & .show {
       display: flex;
@@ -50,6 +49,7 @@ main img {
     &__list {
       flex-wrap: wrap;
       width: 50%;
+      /*Alinear a la derecha el texto de la barra de navegación derecha */
       &:nth-of-type(2) {
         justify-content: flex-end;
         margin-left: auto;
@@ -61,34 +61,34 @@ main img {
   }
 
   &__nav-bar__icon {
-    padding: -2px;
-    display: block;
     border: solid 1px var(--color-icon);
-    text-align: center;
-    font-size: 2rem;
     color: var(--color-grey-light);
+    display: block;
+    font-size: 2rem;
+    padding: -2px;
+    text-align: center;
     & i {
-      // border-radius: 0.3rem;
-      padding: 0.5rem;
       background-color: var(--color-icon);
+      padding: 0.5rem;
     }
   }
 }
+main {
+  padding-top: 16rem;
+}
 .catalog {
+  background-color: var(--color-grey-light);
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
-  background-color: var(--color-grey-light);
-  font-size: 1.2rem;
-  &__category {
-  }
+  font-size: var(--size-body);
 }
 
 .footer {
-  padding-top: 2rem;
   display: flex;
   flex-wrap: wrap;
-  font-size: 1.2rem;
+  font-size: var(--size-body);
+  padding-top: 2rem;
   & .copyright {
     margin: 2rem 0px 1.5rem 1rem;
   }
@@ -99,21 +99,21 @@ main img {
     padding: 1rem;
     &__item {
       font-size: 1;
-      width: 30%;
       text-align: center;
+      width: 30%;
       & span {
+        color: var(--color-grey-dark);
         display: block;
-        margin-bottom: 1rem;
         font-size: 2rem;
         font-weight: 700;
-        color: var(--color-grey-dark);
+        margin-bottom: 1rem;
       }
       & i {
+        color: var(--color-icon);
         display: block;
-        width: auto;
         font-size: 2rem;
         margin-bottom: 1rem;
-        color: var(--color-icon);
+        width: auto;
       }
     }
   }

@@ -1,15 +1,18 @@
 :root {
   --color-primary: #eac926;
   --color-grey-dark: #666;
-  --color-grey-light: #ebebeb;
+  --color-grey-light: #f1efef;
   --color-icon: #1259c3;
   --color-blue-dark: #03264c;
   --color-green: #39b54a;
-
   --shadow-dark: 0 2rem 6rem rgba(0, 0, 0, 0.3);
   --shadow-light: 0 2rem 5rem rgba(0, 0, 0, 0.1);
-
   --line: 1px solid var(--color-grey-light-3);
+  /*Tamaños de fuente usados*/
+  --size-body: 1.2rem;
+  --size-headline: 2.4rem;
+  --size-prices: 1.8rem;
+  --size-desc: 1.6rem;
 }
 //Formato General Global
 * {
