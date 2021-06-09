@@ -8,7 +8,7 @@
   --color-green: #39b54a;
   --shadow-dark: 0 2rem 6rem rgba(0, 0, 0, 0.3);
   --shadow-light: 0 2rem 5rem rgba(0, 0, 0, 0.1);
-  --line: 1px solid var(--color-grey-light-3);
+  --line: 1px solid #ebebeb;
   /*Tamaños de fuente usados*/
   --size-body: 1.2rem;
   --size-headline: 2.4rem;
@@ -46,7 +46,7 @@ a:active {
 
 main img {
   display: block;
-  margin: 0 auto;
+  margin: 1rem auto;
   max-width: 80%;
   height: auto; }
 
@@ -74,7 +74,8 @@ main img {
     display: none;
     flex-wrap: wrap;
     justify-content: space-evenly;
-    width: 95%; }
+    width: 95%;
+    transition: height, 2s; }
     .header__second-row .show {
       display: flex; }
     .header__second-row__list {
@@ -97,6 +98,13 @@ main img {
       background-color: var(--color-icon);
       padding: 0.5rem; }
 
+.image__banner {
+  margin-top: -1.5rem;
+  width: 98vw; }
+  .image__banner img.banner {
+    width: 100%;
+    height: auto; }
+
 main {
   padding-top: 16rem; }
 
@@ -105,7 +113,9 @@ main {
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
-  font-size: var(--size-body); }
+  font-size: var(--size-body);
+  width: 90%;
+  margin: auto; }
 
 .footer {
   display: flex;
@@ -134,6 +144,12 @@ main {
         font-size: 2rem;
         margin-bottom: 1rem;
         width: auto; }
+
+.delivery_icon {
+  padding: 1rem;
+  border-radius: 50%;
+  color: var(--color-green);
+  border: solid 1px var(--color-green); }
 
 .logo {
   min-width: 25%;
@@ -183,20 +199,21 @@ main {
 .catalog__category {
   align-items: center;
   display: flex;
-  flex-direction: column; }
+  flex-direction: column;
+  width: 90%;
+  margin: auto; }
   .catalog__category__article {
     background-color: #fff;
     border-radius: 3px;
-    margin-top: 2rem;
-    margin-bottom: 2rem;
+    margin: 1rem;
     width: 98%; }
     .catalog__category__article__item-description {
-      border-top: solid 1px var(--color-grey-light);
+      border-top: solid 1px var(--line);
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
-      margin: 2rem 1rem;
-      padding-top: 2rem; }
+      margin: 1rem 1rem;
+      padding: 1.5rem; }
       .catalog__category__article__item-description .item-price {
         color: var(--color-grey-dark);
         font-size: var(--size-prices);
@@ -209,7 +226,8 @@ main {
       .catalog__category__article__item-description .item-name {
         color: var(--color-grey-dark);
         font-size: var(--size-desc);
-        width: 25%; }
+        width: 25%;
+        display: none; }
   .catalog__category__description {
     align-self: flex-start;
     display: block;
@@ -237,6 +255,8 @@ main {
     display: flex; }
     .header__second-row__list {
       display: flex; }
+  .catalog__category__article__item-description .item-name {
+    display: block; }
   .catalog__category {
     flex-wrap: wrap;
     flex-direction: row;
@@ -247,6 +267,7 @@ main {
       border-bottom: none;
       margin: 0; }
     .catalog__category__article {
+      box-shadow: 0px 0px 10px #646464;
       height: 460px;
       margin: 0.6rem 0.2rem;
       width: 48%; }
@@ -277,7 +298,10 @@ main {
     width: 20%; }
   .header .container_search-bar {
     width: 55%; }
+  .catalog__category__article__item-description .item-name {
+    display: block; }
   .catalog__category__article {
+    box-shadow: 0px 0px 10px #646464;
     display: flex;
     flex-wrap: wrap;
     height: 460px;
@@ -309,7 +333,10 @@ main {
     display: none; }
   .header__second-row__list {
     display: flex; }
+  .catalog__category__article__item-description .item-name {
+    display: block; }
   .catalog__category__article {
+    box-shadow: 0px 0px 10px #646464;
     display: flex;
     flex-wrap: wrap;
     height: 460px;
@@ -317,11 +344,11 @@ main {
     max-width: 290px;
     width: 22%; }
     .catalog__category__article img {
-      border-bottom: solid 1px var(--color-grey-light);
       height: auto;
       max-width: 80%;
       padding-bottom: 4rem; }
     .catalog__category__article__item-description {
+      border-top: solid 1px var(--color-grey-light);
       border: none;
       margin: -2rem 0 1rem 1rem;
       width: 100%; }

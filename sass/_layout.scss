@@ -9,7 +9,7 @@ a:active {
 }
 main img {
   display: block;
-  margin: 0 auto;
+  margin: 1rem auto;
   max-width: 80%;
   height: auto;
 }
@@ -38,9 +38,11 @@ main img {
   }
   &__second-row {
     display: none;
+
     flex-wrap: wrap;
     justify-content: space-evenly;
     width: 95%;
+    transition: height, 2s;
 
     & .show {
       display: flex;
@@ -73,6 +75,16 @@ main img {
     }
   }
 }
+
+.image__banner {
+  margin-top: -1.5rem;
+  width: 98vw;
+  & img.banner {
+    width: 100%;
+    height: auto;
+  }
+}
+
 main {
   padding-top: 16rem;
 }
@@ -82,6 +94,8 @@ main {
   flex-wrap: wrap;
   flex-direction: column;
   font-size: var(--size-body);
+  width: 90%;
+  margin: auto;
 }
 
 .footer {
@@ -117,4 +131,11 @@ main {
       }
     }
   }
+}
+
+.delivery_icon {
+  padding: 1rem;
+  border-radius: 50%;
+  color: var(--color-green);
+  border: solid 1px var(--color-green);
 }

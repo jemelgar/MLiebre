@@ -53,19 +53,20 @@
   align-items: center;
   display: flex;
   flex-direction: column;
+  width: 90%;
+  margin: auto;
   &__article {
     background-color: #fff;
     border-radius: 3px;
-    margin-top: 2rem;
-    margin-bottom: 2rem;
+    margin: 1rem;
     width: 98%;
     &__item-description {
-      border-top: solid 1px var(--color-grey-light);
+      border-top: solid 1px var(--line);
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
-      margin: 2rem 1rem;
-      padding-top: 2rem;
+      margin: 1rem 1rem;
+      padding: 1.5rem;
       & .item-price {
         color: var(--color-grey-dark);
         font-size: var(--size-prices);
@@ -81,6 +82,7 @@
         color: var(--color-grey-dark);
         font-size: var(--size-desc);
         width: 25%;
+        display: none;
       }
     }
   }
@@ -124,6 +126,9 @@
     }
   }
 
+  .catalog__category__article__item-description .item-name {
+    display: block;
+  }
   .catalog {
     &__category {
       flex-wrap: wrap;
@@ -136,6 +141,7 @@
         margin: 0;
       }
       &__article {
+        box-shadow: 0px 0px 10px rgb(100, 100, 100);
         height: 460px;
         margin: 0.6rem 0.2rem;
         width: 48%;
@@ -143,6 +149,7 @@
           align-items: flex-start;
           flex-direction: column;
           width: 100%;
+
           & .item-price,
           & .item-discount,
           & .item-name {
@@ -184,7 +191,11 @@
       // justify-content: flex-end;
     }
   }
+  .catalog__category__article__item-description .item-name {
+    display: block;
+  }
   .catalog__category__article {
+    box-shadow: 0px 0px 10px rgb(100, 100, 100);
     display: flex;
     flex-wrap: wrap;
     height: 460px;
@@ -225,8 +236,11 @@
   .header__second-row__list {
     display: flex;
   }
-
+  .catalog__category__article__item-description .item-name {
+    display: block;
+  }
   .catalog__category__article {
+    box-shadow: 0px 0px 10px rgb(100, 100, 100);
     display: flex;
     flex-wrap: wrap;
     height: 460px;
@@ -234,12 +248,12 @@
     max-width: 290px;
     width: 22%;
     & img {
-      border-bottom: solid 1px var(--color-grey-light);
       height: auto;
       max-width: 80%;
       padding-bottom: 4rem;
     }
     &__item-description {
+      border-top: solid 1px var(--color-grey-light);
       border: none;
       margin: -2rem 0 1rem 1rem;
       width: 100%;
