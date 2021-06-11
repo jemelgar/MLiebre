@@ -15,6 +15,7 @@ main img {
 }
 .header {
   position: fixed;
+  z-index: 10;
   align-items: center;
   background-color: var(--color-primary);
   display: flex;
@@ -81,12 +82,12 @@ main img {
   width: 98vw;
   & img.banner {
     width: 100%;
-    height: auto;
+    max-height: 180px;
   }
 }
 
 main {
-  padding-top: 16rem;
+  padding-top: 14rem;
 }
 .catalog {
   background-color: var(--color-grey-light);
@@ -96,6 +97,7 @@ main {
   font-size: var(--size-body);
   width: 90%;
   margin: auto;
+  padding-bottom: 2rem;
 }
 
 .footer {
