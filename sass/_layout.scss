@@ -117,6 +117,11 @@ main {
       font-size: 1;
       text-align: center;
       width: 30%;
+      &:hover {
+        & i {
+          color: rgb(240, 40, 180);
+        }
+      }
       & span {
         color: var(--color-grey-dark);
         display: block;
@@ -141,3 +146,181 @@ main {
   color: var(--color-green);
   border: solid 1px var(--color-green);
 }
+
+/////////////////////////Register
+/*********Register section************/
+.register {
+  background-color: var(--color-grey-light);
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+/*Formato al formulario para hacerlo responsive*/
+.register-form {
+  font-size: 1.5rem;
+  flex-direction: column;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: center;
+  width: 70%;
+  margin: 0 auto;
+  /*Todos los hijos directos del formulario que son divs*/
+  & > div {
+    transition: all 0.33s;
+    width: 100%;
+    padding-bottom: 1.5rem;
+    border-bottom: solid 1px rgb(224, 223, 223);
+    margin: 1rem auto;
+    /* todas las etiquetas label que son hijas directas de los elementos div anteriores*/
+    & label {
+      display: block;
+      justify-content: flex-start;
+      margin: 1.5rem 0;
+    }
+    & > * {
+      /*Todos los hijos directos de los divs*/
+      border: none;
+    }
+  }
+}
+/*Nombre de la clase que tienen los divs que sirven como contenedores de cada input*/
+.control-form {
+  & > input {
+    padding-left: 1rem;
+    &:invalid {
+      color: red;
+    }
+  }
+}
+/*Estética del input de tipo usuario*/
+.tipousuario {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  & label {
+    height: 100%;
+    margin: auto 1rem;
+  }
+}
+/*Estética del div que contiene a las categorías*/
+#categories {
+  label {
+    display: inline;
+    width: 70%;
+    margin: auto 1rem;
+  }
+  & > .category {
+    display: flex;
+    align-items: center;
+  }
+}
+/*** Formato al ícono de foto de perfil****/
+#user-pic {
+  font-size: 8rem;
+  display: block;
+  margin: 2rem 0;
+}
+
+.btns {
+  align-self: center;
+}
+/*div que contiene a los botones para mostrarlos uno a lado del otro*/
+#btnform {
+  color: #fff;
+  background-color: var(--color-icon);
+  padding: 1.5rem 0;
+  border-radius: 5px;
+  width: 40%;
+  transition: all 0.23s;
+  cursor: pointer;
+  /*fondo gris al primer botó*/
+  &:first-child {
+    background-color: rgb(207, 206, 206);
+  }
+  /*Efecto de sombra al pasar el cursor*/
+  &:hover {
+    box-shadow: var(--shadow-dark);
+  }
+}
+
+/**Termina el css del register**/
+
+/*Empieza el login*/
+//////////////////LOGIN
+/*Para acomodar los elementos*/
+.logincontainer {
+  display: flex;
+  flex-direction: column;
+  justify-items: center;
+  align-content: center;
+  background-color: var(--color-grey-light);
+  height: 50vh;
+  /*Todos los formularios dentro del contenedor*/
+  & form {
+    margin: 0 auto;
+    width: 80%;
+    text-align: center;
+    /*Todos los input dentro del formulario*/
+    & input {
+      border: none;
+      outline: none;
+      box-shadow: var(--shadow-light);
+      font-family: inherit;
+      padding-left: 1rem;
+      width: 70%;
+      height: 3rem;
+      margin: 2rem auto;
+      display: block;
+      border-radius: 3px;
+      /*seleccionamos el elemento de tipo texto (Nombre)*/
+      &[type~="text"]:hover {
+        background-color: rgb(119, 194, 255);
+      }
+
+      &:invalid {
+        color: red;
+      }
+      &:valid {
+        color: green;
+        font-weight: 900;
+      }
+    }
+    /*Todos los botones dentro del formulario*/
+    & button {
+      color: #fff;
+      background-color: var(--color-icon);
+      width: 70%;
+      padding: 0.8rem;
+      border: none;
+      border-radius: 3px;
+      cursor: pointer;
+      transition: all 0.3s;
+      &:hover {
+        box-shadow: var(--shadow-dark);
+      }
+    }
+  }
+}
+
+// .control-form-oferta {
+//   display: flex;
+//   flex-direction: row;
+//   flex-wrap: wrap;
+//   & label {
+//     width: 100%;
+//   }
+// }
+
+// .contenedor-oferta {
+//   display: flex;
+//   // flex-wrap: wrap;
+//   align-items: center;
+//   width: 8%;
+//   & .option {
+//     margin-right: -1rem;
+//     display: inline;
+//     // width: 10%;
+//     margin: 0 auto;
+//   }
+// }

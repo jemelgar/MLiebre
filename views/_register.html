@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/css/styles.css" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      src="https://kit.fontawesome.com/5eeef2a623.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <title>Practica movil Mercado Libre</title>
+  </head>
+  <body>
+    <header class="header">
+      <div class="header__first-row">
+        <div class="header__first-row__logo logo">
+          <img src="/images/logo-mercado-liebre.svg" alt="logo" />
+        </div>
+        <form class="container_search-bar">
+          <!-- <form class="header__first-row__search-bar search-bar"> -->
+          <input type="search" class="" placeholder="Grandes Ofertas" />
+          <button class="search__icon">
+            <i class="fas fa-search search"></i>
+          </button>
+        </form>
+        <!-- </div> -->
+        <p class="header__copy">
+          <i class="fas fa-hand-holding-usd"></i> Compra en cuotas y sin tarjeta
+          de crédito
+        </p>
+      </div>
+      <!-- End of header__first-row -->
+      <div class="nav-bar header__second-row" id="nav-ul">
+        <ul class="nav-bar__left header__second-row__list">
+          <li class="nav-bar__left__item header__second-row__list__item">
+            <a href="#">Ofertas</a>
+          </li>
+          <li class="nav-bar__left__item header__second-row__list__item">
+            <a href="#">Tiendas Oficiales</a>
+          </li>
+          <li class="nav-bar__left__item header__second-row__list__item">
+            <a href="#">Vender</a>
+          </li>
+          <li class="nav-bar__left__item header__second-row__list__item">
+            <a href="#">Ayuda</a>
+          </li>
+        </ul>
+        <ul class="nav-bar__right header__second-row__list">
+          <li class="nav-bar__right__item header__second-row__list__item">
+            <a href="#"><i class="far fa-id-card"></i> Crea tu cuenta</a>
+          </li>
+          <li class="nav-bar__right__item header__second-row__list__item">
+            <a href="#"><i class="fas fa-sign-in-alt"></i> Ingresa</a>
+          </li>
+          <li class="nav-bar__right__item header__second-row__list__item">
+            <a href="#"><i class="fas fa-shopping-basket"></i> Mis compras</a>
+          </li>
+        </ul>
+      </div>
+      <button class="header__nav-bar__icon" id="hamburguer">
+        <i class="fas fa-bars"></i>
+      </button>
+
+      <!-- End of header__second-row -->
+    </header>
+    <main class="register">
+      <div class="register-container">
+        <form action="/" class="register-form" autocomplete="off">
+          <div class="control-form">
+            <label for="name">Nombre</label>
+            <input
+              type="text"
+              name="name"
+              placeholder="Ingrese el nombre"
+              id="name"
+            />
+          </div>
+          <div class="control-form">
+            <label for="price">Precio</label>
+            <input
+              type="text"
+              name="price"
+              placeholder="Ingrese el precio"
+              id="price"
+            />
+          </div>
+          <div class="control-form">
+            <label for="estado">Selecciona tu estado</label>
+            <select name="city" id="estado">
+              <option value="chis">Chiapas</option>
+              <option value="oax">Oaxaca</option>
+              <option value="Yuc">Yucatán</option>
+            </select>
+          </div>
+          <div class="control-form">
+            <label for="description">Descripción</label>
+            <textarea
+              name="description"
+              placeholder="Ingrese la descripción"
+              id="description"
+            ></textarea>
+          </div>
+
+          <div class="control-form-oferta">
+            <label for="oferta">¿Está en oferta?</label>
+            <div class="contenedor-oferta">
+              <label for="ofertaSi" class="option">Sí</label>
+              <input type="radio" name="oferta" id="ofertaSi" value="si" />
+            </div>
+            <div class="contenedor-oferta">
+              <label for="ofertaNo" class="option">No</label>
+              <input
+                type="radio"
+                name="oferta"
+                id="ofertaNo"
+                value="no"
+                class="option"
+              />
+            </div>
+          </div>
+        </form>
+      </div>
+    </main>
+  </body>
+</html>

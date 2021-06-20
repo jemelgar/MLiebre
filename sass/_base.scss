@@ -34,5 +34,21 @@ html {
 }
 body {
   font-family: "Roboto", sans-serif;
+  // background-color: red;
 }
+.register-form {
+  input:not([type~="checkbox"]),
+  textarea,
+  select {
+    // background-color: transparent;
+    font-size: 1.5rem;
+    height: 3rem;
+    font-family: inherit;
+    outline: none;
+    width: 60%;
+    border-radius: 3px;
+    border: none;
+  }
+}
+
 //-------------------------------------

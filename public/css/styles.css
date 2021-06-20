@@ -35,6 +35,17 @@ html {
 body {
   font-family: "Roboto", sans-serif; }
 
+.register-form input:not([type~="checkbox"]),
+.register-form textarea,
+.register-form select {
+  font-size: 1.5rem;
+  height: 3rem;
+  font-family: inherit;
+  outline: none;
+  width: 60%;
+  border-radius: 3px;
+  border: none; }
+
 a {
   color: var(--color-icon); }
 
@@ -134,6 +145,8 @@ main {
       font-size: 1;
       text-align: center;
       width: 30%; }
+      .footer__list__item:hover i {
+        color: #f028b4; }
       .footer__list__item span {
         color: var(--color-grey-dark);
         display: block;
@@ -152,6 +165,137 @@ main {
   border-radius: 50%;
   color: var(--color-green);
   border: solid 1px var(--color-green); }
+
+/*********Register section************/
+.register {
+  background-color: var(--color-grey-light);
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap; }
+
+/*Formato al formulario para hacerlo responsive*/
+.register-form {
+  font-size: 1.5rem;
+  flex-direction: column;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: center;
+  width: 70%;
+  margin: 0 auto;
+  /*Todos los hijos directos del formulario que son divs*/ }
+  .register-form > div {
+    transition: all 0.33s;
+    width: 100%;
+    padding-bottom: 1.5rem;
+    border-bottom: solid 1px #e0dfdf;
+    margin: 1rem auto;
+    /* todas las etiquetas label que son hijas directas de los elementos div anteriores*/ }
+    .register-form > div label {
+      display: block;
+      justify-content: flex-start;
+      margin: 1.5rem 0; }
+    .register-form > div > * {
+      /*Todos los hijos directos de los divs*/
+      border: none; }
+
+/*Nombre de la clase que tienen los divs que sirven como contenedores de cada input*/
+.control-form > input {
+  padding-left: 1rem; }
+  .control-form > input:invalid {
+    color: red; }
+
+/*Estética del input de tipo usuario*/
+.tipousuario {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center; }
+  .tipousuario label {
+    height: 100%;
+    margin: auto 1rem; }
+
+/*Estética del div que contiene a las categorías*/
+#categories label {
+  display: inline;
+  width: 70%;
+  margin: auto 1rem; }
+
+#categories > .category {
+  display: flex;
+  align-items: center; }
+
+/*** Formato al ícono de foto de perfil****/
+#user-pic {
+  font-size: 8rem;
+  display: block;
+  margin: 2rem 0; }
+
+.btns {
+  align-self: center; }
+
+/*div que contiene a los botones para mostrarlos uno a lado del otro*/
+#btnform {
+  color: #fff;
+  background-color: var(--color-icon);
+  padding: 1.5rem 0;
+  border-radius: 5px;
+  width: 40%;
+  transition: all 0.23s;
+  cursor: pointer;
+  /*fondo gris al primer botó*/
+  /*Efecto de sombra al pasar el cursor*/ }
+  #btnform:first-child {
+    background-color: #cfcece; }
+  #btnform:hover {
+    box-shadow: var(--shadow-dark); }
+
+/**Termina el css del register**/
+/*Empieza el login*/
+/*Para acomodar los elementos*/
+.logincontainer {
+  display: flex;
+  flex-direction: column;
+  justify-items: center;
+  align-content: center;
+  background-color: var(--color-grey-light);
+  height: 50vh;
+  /*Todos los formularios dentro del contenedor*/ }
+  .logincontainer form {
+    margin: 0 auto;
+    width: 80%;
+    text-align: center;
+    /*Todos los input dentro del formulario*/
+    /*Todos los botones dentro del formulario*/ }
+    .logincontainer form input {
+      border: none;
+      outline: none;
+      box-shadow: var(--shadow-light);
+      font-family: inherit;
+      padding-left: 1rem;
+      width: 70%;
+      height: 3rem;
+      margin: 2rem auto;
+      display: block;
+      border-radius: 3px;
+      /*seleccionamos el elemento de tipo texto (Nombre)*/ }
+      .logincontainer form input[type~="text"]:hover {
+        background-color: #77c2ff; }
+      .logincontainer form input:invalid {
+        color: red; }
+      .logincontainer form input:valid {
+        color: green;
+        font-weight: 900; }
+    .logincontainer form button {
+      color: #fff;
+      background-color: var(--color-icon);
+      width: 70%;
+      padding: 0.8rem;
+      border: none;
+      border-radius: 3px;
+      cursor: pointer;
+      transition: all 0.3s; }
+      .logincontainer form button:hover {
+        box-shadow: var(--shadow-dark); }
 
 .logo {
   min-width: 25%;
@@ -209,6 +353,51 @@ main {
     border-radius: 3px;
     margin: 1rem;
     width: 98%; }
+
+
+    /*****************************************************************/
+    .catalog__category__article:hover {
+      transition: box-shadow 0.5s;
+      box-shadow: var(--shadow-dark); }
+      .catalog__category__article:hover .item-name {
+        animation-name: moveInRight;
+        animation-duration: 0.5s;
+        animation-timing-function: ease-out;
+        opacity: 1; }
+      .catalog__category__article:hover .delivery_icon {
+        transform: rotate(-90deg); }
+
+        /***********************************************************/
+        /*Animación*/
+@keyframes moveInRight {
+  0% {
+    opacity: 0;
+    transform: translatey(250px); }
+  80% {
+    opacity: 1;
+    transform: translatey(-12px); }
+  90% {
+    transform: translatey(-8px); }
+  100% {
+    opacity: 1;
+    transform: translatey(0); } }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     .catalog__category__article__item-description {
       width: 96%;
       border-top: var(--line);
@@ -229,10 +418,12 @@ main {
         font-size: var(--size-desc);
         width: 50%; }
       .catalog__category__article__item-description .item-name {
+        opacity: 0;
         color: var(--color-grey-dark);
         font-size: var(--size-desc);
         width: 100%; }
       .catalog__category__article__item-description i {
+        transition: all 1s;
         display: block;
         font-size: 16px;
         padding: 5px;
@@ -255,6 +446,11 @@ main {
   .show > * {
     display: flex; }
 
+.submitlogin:hover {
+  background-color: #0022aa; }
+
+
+
 /* Responsivo a 600px*/
 @media (min-width: 600px) {
   main {
@@ -271,8 +467,6 @@ main {
     display: flex; }
     .header__second-row__list {
       display: flex; }
-  .catalog__category__article__item-description .item-name {
-    display: block; }
   .catalog__category {
     flex-wrap: wrap;
     flex-direction: row;
@@ -283,7 +477,6 @@ main {
       border-bottom: none;
       margin: 0; }
     .catalog__category__article {
-      box-shadow: var(--shadow-dark);
       height: 460px;
       margin: 0.6rem 0.2rem;
       width: 48%; }
@@ -313,10 +506,7 @@ main {
     width: 20%; }
   .header .container_search-bar {
     width: 55%; }
-  .catalog__category__article__item-description .item-name {
-    display: block; }
   .catalog__category__article {
-    box-shadow: var(--shadow-dark);
     display: flex;
     flex-wrap: wrap;
     height: 460px;
@@ -342,20 +532,24 @@ main {
     display: none; }
   .header__second-row__list {
     display: flex; }
-  .catalog__category__article__item-description .item-name {
-    display: block; }
   .catalog__category__article {
-    box-shadow: var(--shadow-dark);
     display: flex;
     flex-wrap: wrap;
     height: 460px;
+    overflow: hidden;
     margin: 0.6rem 0.2rem;
-    max-width: 290px;
-    width: 22%; }
+    max-width: 290px; }
     .catalog__category__article img {
       height: auto;
       max-width: 80%; }
     .catalog__category__article__item-description .item-price,
     .catalog__category__article__item-description .item-discount,
     .catalog__category__article__item-description .item-name {
-      width: 80%; } }
+      width: 80%; }
+  /*Item name*/
+  /*Register*/
+  .register-form {
+    flex-direction: row;
+    justify-content: space-between; }
+    .register-form > div {
+      width: 45%; } }
